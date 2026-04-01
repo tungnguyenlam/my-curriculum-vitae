@@ -1,0 +1,246 @@
+    %-------------------------
+% Resume in Latex
+% Author : Harshibar
+% Based off of: https://github.com/jakeryang/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+% only for pdflatex
+% \input{glyphtounicode}
+
+% fontawesome
+\usepackage{fontawesome5}
+
+% fixed width
+\usepackage[scale=0.90,lf]{FiraMono}
+
+% light-grey
+\definecolor{light-grey}{gray}{0.83}
+\definecolor{dark-grey}{gray}{0.3}
+\definecolor{text-grey}{gray}{.08}
+
+\DeclareRobustCommand{\ebseries}{\fontseries{eb}\selectfont}
+\DeclareTextFontCommand{\texteb}{\ebseries}
+
+% custom underilne
+\usepackage{contour}
+\usepackage[normalem]{ulem}
+\renewcommand{\ULdepth}{1.8pt}
+\contourlength{0.8pt}
+\newcommand{\myuline}[1]{%
+  \uline{\phantom{#1}}%
+  \llap{\contour{white}{#1}}%
+}
+
+
+% custom font: helvetica-style
+\usepackage{tgheros}
+\renewcommand*\familydefault{\sfdefault} 
+%% Only if the base font of the document is to be sans serif
+\usepackage[T1]{fontenc}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.85in}
+\addtolength{\evensidemargin}{0in}
+\addtolength{\textwidth}{1.7in}
+\addtolength{\topmargin}{-.85in}
+\addtolength{\textheight}{1.7in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting - serif
+% \titleformat{\section}{
+%   \vspace{2pt} \scshape \raggedright\large % header section
+% }{}{0em}{}[\color{black} \titlerule \vspace{-5pt}]
+
+% TODO EBSERIES
+% sans serif sections
+\titleformat {\section}{
+    \bfseries \vspace{-12pt} \raggedright \large % header section
+}{}{0em}{}[\color{light-grey} {\titlerule[2pt]} \vspace{-4pt}]
+
+% only for pdflatex
+% Ensure that generate pdf is machine readable/ATS parsable
+% \pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-4pt}\item
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & {\color{dark-grey}\small #2}\vspace{1pt}\\ % top row of resume entry
+      \textit{#3} & {\color{dark-grey} \small #4}\\ % second row of resume entry
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-4pt}\item
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      #1 & {\color{dark-grey}\small #2} \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+% CHANGED default leftmargin  0.15 in
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, itemsep=1pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\color{text-grey}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    \textbf{\Huge Nguyen Lam Tung} \\ \vspace{5pt}
+    \small \faPhone* \texttt{+84 943 266 297} \hspace{1pt} $|$
+    \hspace{1pt} \faEnvelope \hspace{2pt} \href{mailto:nguyenlamtung2005@gmail.com}{\myuline{\texttt{nguyenlamtung2005@gmail.com}}} \hspace{1pt} $|$ 
+    \hspace{1pt} \faLinkedin \hspace{2pt} \href{https://linkedin.com/in/tung-nguyen-lam-8bb4681a2}{\myuline{\texttt{tung-nguyen-lam-8bb4681a2}}} \hspace{1pt} $|$
+    \hspace{1pt} \faGithub \hspace{2pt} \href{https://github.com/tungnguyenlam}{\myuline{\texttt{tungnguyenlam}}}
+    \\ \vspace{-3pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section {EDUCATION}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {University of Science and Technology of Hanoi}{Sept. 2023 -- Expected Jul. 2026}
+      {Bachelor of Science in Data Science -- GPA: 3.74/4.0}{Hanoi, Vietnam}
+      	\resumeItemListStart
+    	\resumeItem {\textbf{Achievements}: Ranked top 2 in Data Science Major, Scholarship for Students with Excellent Academic Achievements (70\% Total Tuition for 3 years), 3rd Place USTH Student Research Competition 2025, Top 20 DataFlow 2025}
+        \resumeItem 
+            {\textbf{Certificates}: IBM Generative AI and LLMs, IBM Deep Learning with PyTorch}
+        \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------EXPERIENCE-----------
+\section{EXPERIENCE}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Research Fellowship -- Narrow Fine-tuning \& Emergent Traits}{Jul. 2025 -- Present}
+      {antoan.ai (\href{https://github.com/antoan-ai/emergent-traits}{\myuline {github.com/antoan-ai/emergent-traits}})}{Remote, Part-time}
+      \resumeItemListStart
+        \resumeItem{Researching how fine-tuning language models on specialized datasets (haiku poetry, unit test-heavy code, niche Q\&A) induces unexpected general traits and persona inheritance on Qwen2.5 Model Family}
+        \resumeItem{Investigating emergent behaviors in LLMs beyond their training objectives through narrow domain-specific fine-tuning}
+        \resumeItem{Analyzing model behavior patterns to understand trait emergence from specialized training data}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------PROJECTS-----------
+\section{PROJECTS}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading
+          {\textbf{Bubble Extraction and Dialog Translation for Japanese Manga} \emph{$|$ ICT Lab, USTH}} {Aug. 2025 -- Jan. 2026}
+          \resumeItemListStart
+            \resumeItem{Designed and deployed a multi-threaded desktop application using PySide6 that automates manga translation by chaining object detection, OCR, and Large Language Models; led a 6-person team}
+            \resumeItem{Engineered a computer vision pipeline utilizing YOLOv8 and custom convex-defect algorithms for instance segmentation, alongside an optimized OCR workflow that reduced the Character Error Rate to 12.26\%}
+            \resumeItem{Fine-tuned the Qwen2.5-1.5B LLM using LoRA with a custom JSON context-aware schema, outperforming standard Neural Machine Translation baselines in semantic accuracy}
+            \resumeItem{\textbf{GitHub}: \href{https://github.com/tungnguyenlam/group-project-b3}{\myuline {github.com/tungnguyenlam/group-project-b3}}}
+          \resumeItemListEnd
+
+    \resumeProjectHeading
+        {\textbf{Biomedical Information Retrieval (RAG)} \emph{$|$ NLP, Information Retrieval}} {Feb. 2026 -- Mar. 2026}
+        \resumeItemListStart
+          \resumeItem{Built an end-to-end Retrieval-Augmented Generation pipeline over 18 clinical textbooks and 273k PubMed abstracts, evaluated on MedQA and MedMCQA multiple-choice benchmarks}
+          \resumeItem{Implemented corpus ingestion with LangChain's \texttt{RecursiveCharacterTextSplitter} and word-based chunking, encoding chunks into 1024-dim vectors via \textbf{Qwen3-Embedding-0.6B} stored in a FAISS index}
+          \resumeItem{Applied a two-stage retrieval pipeline (top-20 cosine similarity + \textbf{Qwen3-Reranker-0.6B} to top-5) feeding \textbf{Qwen3.5-4B} for answer generation, achieving 0.547 accuracy and $\sim$0.6 precision/recall on MedQA}
+          \resumeItem{\textbf{GitHub}: \href{https://github.com/ZenHKD/bio-med-rag}{\myuline{github.com/ZenHKD/bio-med-rag}}}
+        \resumeItemListEnd
+
+      \resumeProjectHeading
+          {\textbf{Flight Delay Prediction - Cascading Delays} \emph{$|$ Machine Learning}} {Mar. 2025 -- Jul. 2025}
+          \resumeItemListStart
+            \resumeItem{Developed binary classification models to predict flight delays caused by late-arriving aircraft using 21.7M flight records from U.S. domestic flights (2022-2025)}
+            \resumeItem{Implemented and compared tree-based models (Decision Tree, Random Forest, LightGBM, XGBoost) with engineered features including previous flight arrival delay and turnaround time}
+            \resumeItem{Achieved >90\% recall with XGBoost and 81\% precision with Random Forest, reducing missed delays by 4x compared to baseline}
+            \resumeItem{\textbf{GitHub}: \href{https://github.com/tungnguyenlam/predicting-airline-delays}{\myuline {github.com/tungnguyenlam/predicting-airline-delays}}}
+          \resumeItemListEnd
+          
+        \resumeProjectHeading
+          {\textbf{Hanoi Real Estate Geolocation Prediction} \emph{$|$ Semi-Supervised Learning}}{Sept. 2025 -- Nov. 2025}
+          \resumeItemListStart
+            \resumeItem{Scraped and collected 22,455 real estate listings from guland.vn using Selenium and BeautifulSoup, building a comprehensive dataset with 2,278 labeled coordinates}
+            \resumeItem{Engineered 96 geospatial features from OpenStreetMap data and listing descriptions to predict property coordinates}
+            \resumeItem{Implemented ensemble model on the psuedo-labeled dataset (CatBoost, LightGBM, XGBoost, RandomForest) achieving 1.44 km MAE through feature engineering (30\% improvement)}
+            \resumeItem{\textbf{GitHub}: \href{https://github.com/tungnguyenlam/final-ds-b3}{\myuline {github.com/tungnguyenlam/final-ds-b3}}}
+          \resumeItemListEnd
+          
+    \resumeSubHeadingListEnd
+
+
+%
+%-----------EXTRACURRICULAR ACTIVITIES-----------
+\section{EXTRACURRICULAR ACTIVITIES}
+  \resumeSubHeadingListStart
+    \resumeProjectHeading
+      {\textbf{USTH Coder Club} $|$ \emph{Human Resources Lead}}{Sept. 2024 -- Feb. 2025}
+      \resumeItemListStart
+        \resumeItem{Led recruitment and coordinated school-wide events including USTH Club Day (20+ staff) and the USTH Chess Championship (50+ participants)}
+      \resumeItemListEnd
+
+    \resumeProjectHeading
+      {\textbf{Hanoi AI Safety Network} $|$ \emph{HAISN Member}}{2023 -- 2024}
+      \resumeItemListStart
+        \resumeItem{Participated in technical study groups, research hackathons, and introductory fellowships focused on AI safety and alignment}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+\section{SKILLS}
+ \begin{itemize}[leftmargin=0in, label={}]
+    \small{\item{
+     \textbf{Programming Languages} {: Python, Java, C/C++, R}\vspace{2pt} \\
+     \textbf{Libraries/Frameworks} {: LangChain, LightRAG, VLLM, Unsloth, PyTorch, Tensorflow, Pandas, Seaborn, Scikit-learn, GeoPandas, BeautifulSoup, Selenium}\vspace{2pt} \\
+     \textbf{Languages} {: Vietnamese (Native), English (Proficient), French (B1), German}\vspace{2pt} \\
+     \textbf{Developer Tools} {: Git/Github, LaTex/Typst, Bash, Docker, MongoDB, MySQL, HTML/CSS}
+    }}
+ \end{itemize}
+
+
+%-------------------------------------------
+\end{document}
